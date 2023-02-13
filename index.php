@@ -1,3 +1,4 @@
+<!-- Jorge Ramirez - C.I. 28219444 -->
 <?php
 		include 'calculos.php';
 		$resultado="0";
@@ -15,7 +16,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
     <title>Mi Calculadora en PHP</title>
 </head>
 <body>
@@ -23,7 +23,7 @@
 	<div class="calculadora">
 		<form action="<?php $_SERVER["PHP_SELF"]?>" method="GET">
 			<input type="text" class="campo" name="num1" value="" placeholder="1er operando">
-			<select name="operador">
+			<select class="operador" name="operador">
 				<option value="+">+</option>
 				<option value="-">-</option>
 				<option value="x">x</option>
@@ -32,9 +32,41 @@
 			<input type="text" class="campo" name="num2" value="" placeholder="2do operando">
 			<input type="submit" value="Calcular operación">
 		</form>
-		<input type="text" name="resultado" value="<?= $resultado ?>"disabled>
+		<input class="resultado" type="text" name="resultado" value="<?= $resultado ?>"disabled>
 		
 		</input>
 	</div>
 </body>
 </html>
+
+<style>
+	body {
+		font-family: sans-serif;
+		display:flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	h1 {
+		flex-basis:100%;
+		text-align: center;
+	}
+	.calculadora {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.campo {
+		flex-basis: 33.3%;
+	}
+	.operador {
+		flex-basis: 33.3%
+	}
+	.resultado {
+		text-align: center;
+		margin: 7.5% 100% 0 100%;
+		font-size: 1.75rem;
+		width: fit-content;
+	}
+</style>

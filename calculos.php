@@ -1,4 +1,5 @@
 <?php
+# Jorge Ramirez - C.I. 28219444
 function operacion($operando1, $operando2, $operador)
 {
 	if (isset($operando1, $operando2, $operador)) {
@@ -15,12 +16,14 @@ function operacion($operando1, $operando2, $operador)
 				return "Operador invalido";
 			}
 		} else {
-			return "ERROR-> se necesitan solo números para operar";
+			return "No se permiten caracteres";
 		}
 	}else
 	{
-		$operando1="";
-		$operando2="";
-		$operador="";
+		$operando1="NULL";
+		$operando2="NULL";
+		$operador="NULL";
+
+		return "No se puede operar con caracteres vacios";
 	}
 }
