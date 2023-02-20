@@ -1,2 +1,3 @@
 # Calculadora
-Este es un proyecto de una calculadora hecha en PHP que me mandaron de la universidad
+Esta es una calculadora sencilla que desarrolle para la universidad
+Realiza operaciones sencillas con numeros enteros
